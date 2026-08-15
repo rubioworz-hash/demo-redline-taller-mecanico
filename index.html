@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css">
 
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>[data-reveal] { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
-        <a href="#galeria">Galería</a>
+        <a href="#galeria">Especialidades</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#ubicacion">Ubicación</a>
       </nav>
@@ -48,8 +49,9 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="inicio">
-    <div class="hero__media placeholder-media" aria-hidden="true">
-      <i class="fa-solid fa-car-side"></i>
+    <div class="hero__media" aria-hidden="true">
+      <img src="assets/images/webp/hero-diagnostico.webp" alt="" width="2400" height="922">
+      <div class="hero__scrim"></div>
     </div>
     <div class="container hero__content">
       <p class="eyebrow">Taller mecánico automotriz</p>
@@ -77,10 +79,12 @@
   <!-- ============ SOBRE NOSOTROS ============ -->
   <section class="section" id="nosotros">
     <div class="container about-grid">
-      <div class="about-media placeholder-media" aria-hidden="true">
-        <i class="fa-solid fa-screwdriver-wrench"></i>
+      <div class="about-panel" data-reveal>
+        <i class="fa-solid fa-quote-left about-panel__mark" aria-hidden="true"></i>
+        <p class="about-panel__quote">Cada diagnóstico se explica antes de tocar una sola pieza.</p>
+        <div class="about-panel__brand">REDLINE <span>Taller Mecánico</span></div>
       </div>
-      <div class="about-content">
+      <div class="about-content" data-reveal>
         <p class="eyebrow">Sobre nosotros</p>
         <h2>Mecánica seria, explicada en lenguaje simple.</h2>
         <p>
@@ -115,47 +119,56 @@
     </div>
   </section>
 
+  <!-- ============ BANNER DE CONFIANZA ============ -->
+  <section class="trust-banner" data-reveal>
+    <img src="assets/images/webp/banner-dashboard.webp" alt="" width="2000" height="1333">
+    <div class="trust-banner__scrim"></div>
+    <div class="container trust-banner__content">
+      <p class="trust-banner__quote">"No cambiamos piezas por rutina. Las cambiamos porque el diagnóstico dice que toca."</p>
+    </div>
+  </section>
+
   <!-- ============ SERVICIOS ============ -->
   <section class="section section--surface" id="servicios">
     <div class="container">
-      <div class="section__head">
+      <div class="section__head" data-reveal>
         <p class="eyebrow">Catálogo de servicios</p>
         <h2>Todo lo que tu vehículo necesita, en un solo lugar</h2>
         <p class="section__sub">Selecciona el servicio y agenda directamente por WhatsApp.</p>
       </div>
 
       <div class="services-grid">
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-oil-can" aria-hidden="true"></i></div>
           <h3>Mantenimiento Preventivo</h3>
           <p>Cambio de aceite, filtros, revisión de niveles y puntos críticos antes de que se conviertan en un problema mayor.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-wrench" aria-hidden="true"></i></div>
           <h3>Mecánica General</h3>
           <p>Reparación de motor, transmisión, embrague y componentes mecánicos, con diagnóstico previo y presupuesto claro.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
           <h3>Diagnóstico Computarizado</h3>
           <p>Escaneo electrónico completo para identificar fallas de sensores, módulos y sistema eléctrico con precisión.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-snowflake" aria-hidden="true"></i></div>
           <h3>Aire Acondicionado</h3>
           <p>Revisión de gas refrigerante, compresor y fugas para que el A/C enfríe de verdad, todo el año.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-car-burst" aria-hidden="true"></i></div>
           <h3>Frenos y Suspensión</h3>
           <p>Pastillas, discos, amortiguadores y rótulas — la seguridad del vehículo revisada con criterio, no solo cambiada por rutina.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card" data-reveal>
           <div class="service-card__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
           <h3>Sistema Eléctrico</h3>
           <p>Batería, alternador, arranque y cableado — diagnóstico de fallas eléctricas intermitentes que otros talleres no encuentran.</p>
@@ -164,22 +177,40 @@
     </div>
   </section>
 
-  <!-- ============ GALERÍA ============ -->
+  <!-- ============ ESPECIALIDADES ============ -->
   <section class="section" id="galeria">
     <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Galería</p>
-        <h2>Trabajos realizados</h2>
-        <p class="section__disclaimer">[DATOS DE EJEMPLO] Fotografía ilustrativa — pendiente de reemplazar por fotos reales de trabajos de REDLINE.</p>
+      <div class="section__head" data-reveal>
+        <p class="eyebrow">Especialidades</p>
+        <h2>Lo que se nos da mejor</h2>
+        <p class="section__sub">Cuando el trabajo pide algo más que un cambio de aceite, esto es lo que dominamos.</p>
       </div>
 
-      <div class="gallery-grid">
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-gears"></i></figure>
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-car-side"></i></figure>
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-oil-can"></i></figure>
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></figure>
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-chart"></i></figure>
-        <figure class="gallery-tile placeholder-media" aria-hidden="true"><i class="fa-solid fa-car-burst"></i></figure>
+      <div class="specialty-grid">
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-gears" aria-hidden="true"></i>
+          <span>Transmisión y embrague</span>
+        </div>
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+          <span>Suspensión y dirección</span>
+        </div>
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-oil-can" aria-hidden="true"></i>
+          <span>Motores a fondo</span>
+        </div>
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+          <span>Restauración mecánica</span>
+        </div>
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+          <span>Fallas eléctricas intermitentes</span>
+        </div>
+        <div class="specialty-tile" data-reveal>
+          <i class="fa-solid fa-car-burst" aria-hidden="true"></i>
+          <span>Frenos de alto rendimiento</span>
+        </div>
       </div>
     </div>
   </section>
@@ -187,26 +218,26 @@
   <!-- ============ TESTIMONIOS ============ -->
   <section class="section section--surface" id="testimonios">
     <div class="container">
-      <div class="section__head">
+      <div class="section__head" data-reveal>
         <p class="eyebrow">Testimonios</p>
         <h2>Lo que dicen nuestros clientes</h2>
         <p class="section__sub section__disclaimer">Contenido de demostración con fines ilustrativos — no corresponde a clientes reales.</p>
       </div>
 
       <div class="reviews-grid">
-        <article class="review-card">
+        <article class="review-card" data-reveal>
           <p>"Me explicaron exactamente qué tenía el carro antes de cobrarme un centavo. Primera vez que un taller hace eso."</p>
           <div class="review-card__author">— Cliente de REDLINE</div>
         </article>
-        <article class="review-card">
+        <article class="review-card" data-reveal>
           <p>"Encontraron una falla eléctrica que dos talleres antes no pudieron detectar."</p>
           <div class="review-card__author">— Cliente de REDLINE</div>
         </article>
-        <article class="review-card">
+        <article class="review-card" data-reveal>
           <p>"Agendé mi cita por WhatsApp en dos minutos, sin llamadas ni esperas."</p>
           <div class="review-card__author">— Cliente de REDLINE</div>
         </article>
-        <article class="review-card">
+        <article class="review-card" data-reveal>
           <p>"El presupuesto que me dieron fue exactamente lo que pagué al final. Cero sorpresas."</p>
           <div class="review-card__author">— Cliente de REDLINE</div>
         </article>
@@ -217,13 +248,13 @@
   <!-- ============ UBICACIÓN / CONTACTO ============ -->
   <section class="section" id="ubicacion">
     <div class="container">
-      <div class="section__head">
+      <div class="section__head" data-reveal>
         <p class="eyebrow">Ubicación y contacto</p>
         <h2>Agenda tu cita o visítanos</h2>
       </div>
 
       <div class="location-grid">
-        <div class="location-info">
+        <div class="location-info" data-reveal>
           <div class="info-row">
             <i class="fa-solid fa-location-dot info-row__icon" aria-hidden="true"></i>
             <div>
@@ -260,7 +291,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" novalidate data-reveal>
           <h3>Solicita tu cita</h3>
 
           <label for="fieldName">Nombre completo</label>
@@ -298,7 +329,7 @@
         <h4>Navegación</h4>
         <a href="#servicios">Servicios</a>
         <a href="#nosotros">Nosotros</a>
-        <a href="#galeria">Galería</a>
+        <a href="#galeria">Especialidades</a>
         <a href="#ubicacion">Ubicación</a>
       </div>
 
